@@ -13,7 +13,7 @@ public class RestaurantImpl implements Restaurant {
 
     @Override
     public Menu getMenu() {
-        MenuImpl menu = new MenuImpl();
+        PizzaMenu menu = new PizzaMenu();
         menu.showMenu(name);
         return menu;
     }

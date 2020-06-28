@@ -13,6 +13,9 @@ public class PizzaFactory {
             case "Capriciosa":
                 pizza = new CapriciosaFactory().create(size);
                 break;
+            case "Frutti":
+                pizza = new FruttiTuttiFactory().create(size);
+                break;
             default:
                 pizza = null;
                 break;

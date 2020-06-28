@@ -3,12 +3,12 @@ package fluentinterface.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MenuImpl implements Menu {
+public class PizzaMenu implements Menu {
 
     List<Pizza> menuList = new ArrayList<>();
     List<Pizza> selectedList = new ArrayList<>();
 
-    public MenuImpl() {
+    public PizzaMenu() {
         Pizza margharita = new Pizza() {
             @Override
             public Pizza getName() {
