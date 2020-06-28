@@ -1,25 +1,22 @@
 package abstractfactory.example.factories;
 
 import abstractfactory.example.pizza.Pizza;
+import abstractfactory.example.pizza.PizzaType;
 
 public class PizzaFactory {
 
-    public static Pizza createPizza(String type, int size) {
-        Pizza pizza;
-        switch (type) {
-            case "Margharita":
-                pizza = new MargharitaFactory().create(size);
-                break;
-            case "Capriciosa":
-                pizza = new CapriciosaFactory().create(size);
-                break;
-            case "Frutti":
-                pizza = new FruttiTuttiFactory().create(size);
-                break;
-            default:
-                pizza = null;
-                break;
+    public static Pizza createPizza(PizzaType type, int size) {
+        Pizza pizza = null;
+        if (type.equals(PizzaType.MARGO)) {
+            pizza = new MargharitaFactory().create(size);
+        }
+        if (type.equals(PizzaType.CAPRI)) {
+            pizza = new CapriciosaFactory().create(size);
+        }
+        if (type.equals(PizzaType.FRUTTI)) {
+            pizza = new FruttiTuttiFactory().create(size);
         }
         return pizza;
     }
 }
+
