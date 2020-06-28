@@ -9,8 +9,10 @@ public class FactoryMethod {
         PizzaFactory factoris = new PizzaFactory();
         Pizza margharita = factoris.getPizza(1);
         Pizza capriciosa = factoris.getPizza(2);
+        Pizza frutti = factoris.getPizza(3);
         System.out.println(margharita.getDetectedPizza());
         System.out.println(capriciosa.getDetectedPizza());
+        System.out.println(frutti.getDetectedPizza());
     }
 
 }

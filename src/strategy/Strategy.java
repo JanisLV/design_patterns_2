@@ -1,9 +1,6 @@
 package strategy;
 
-import strategy.example.Cash;
-import strategy.example.CreditCard;
-import strategy.example.Ingredient;
-import strategy.example.Pizza;
+import strategy.example.*;
 
 public class Strategy {
 
@@ -22,6 +19,7 @@ public class Strategy {
 
         pizza.pay(new CreditCard("David Wilson", "5195552421627633", "324", "02/2025"));
 
+        pizza.pay(new GooglePay());
     }
 
 }

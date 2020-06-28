@@ -22,7 +22,9 @@ public class Pizza {
 
     public int calculateTotal() {
         int sum = 0;
-        sum = ingredients.stream().map((ingredient) -> ingredient.getPrice()).reduce(sum, Integer::sum);
+        sum = ingredients.stream()
+                .map((ingredient) -> ingredient.getPrice())
+                .reduce(sum, Integer::sum);
         return sum;
     }
 

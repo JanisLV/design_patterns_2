@@ -1,6 +1,9 @@
 package singleton;
 
+import singleton.example.Animal;
 import singleton.example.Pizza;
+
+import java.time.Instant;
 
 public class Singleton {
 
@@ -15,6 +18,14 @@ public class Singleton {
         System.out.println(margharita);
         System.out.println(capriciosa);
         System.out.println(fruttidimare);
+
+        Animal animal = Animal.getInstance();
+        System.out.println(animal);
+        animal.name = "Cat";
+        System.out.println(animal);
+        animal = Animal.getInstance();
+        System.out.println(animal);
+
 
     }
 }

@@ -21,6 +21,7 @@ public class Command {
         CommandInterface bucketSort = new BucketSort(arr.clone());
         CommandInterface mergeSort = new MergeSort(arr.clone());
         CommandInterface heapSort = new HeapSort(arr.clone());
+        CommandInterface shellSort = new ShellSort(arr.clone());
 
         controler.setCommand(bubbleSort);
         controler.runSort();
@@ -35,6 +36,9 @@ public class Command {
         controler.runSort();
 
         controler.setCommand(heapSort);
+        controler.runSort();
+
+        controler.setCommand(shellSort);
         controler.runSort();
 
     }

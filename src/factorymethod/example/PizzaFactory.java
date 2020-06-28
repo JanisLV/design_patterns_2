@@ -12,6 +12,9 @@ public class PizzaFactory {
             case 2:
                 pizza = new Capriciosa();
                 break;
+            case 3:
+                pizza = new FruttiTutti();
+                break;
             default:
                 pizza = null;
                 break;
